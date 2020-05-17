@@ -7,7 +7,8 @@
             {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-lg btn-primary']) !!}
         </div>
     </div>
-@endsection    
+@endsection  
+@section('content')
     @if (Auth::check())
         <div class="row">
             <aside class="col-sm-4">
