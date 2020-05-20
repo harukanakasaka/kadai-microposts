@@ -13,7 +13,7 @@ class CreateFavoritesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_follow', function (Blueprint $table) {
+        Schema::create('favorites', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->integer('micropost_id')->unsigned()->index();
@@ -33,6 +33,6 @@ class CreateFavoritesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_follow');
+        Schema::dropIfExists('favorites');
     }
 }
